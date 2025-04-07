@@ -1,0 +1,173 @@
+{
+  "categories": [
+    {
+      "name": "Boundary Values",
+      "subcategories": [
+        {
+          "name": "Numbers",
+          "items": [
+            { "title": "Zero", "value": "0" },
+            { "title": "One", "value": "1" },
+            { "title": "Negative One", "value": "-1" },
+            { "title": "Max Int", "value": "2147483647" },
+            { "title": "Min Int", "value": "-2147483648" },
+            { "title": "Max Long", "value": "9223372036854775807" },
+            { "title": "Min Long", "value": "-9223372036854775808" }
+          ]
+        },
+        {
+          "name": "Strings",
+          "items": [
+            { "title": "Empty String", "value": "" },
+            { "title": "Space", "value": " " },
+            { "title": "Long String", "value": "This is a very long string with many characters and symbols. It should test how the input field handles large amounts of text." },
+            { "title": "Special Characters", "value": "!@#$%^&*()_+=-`~[]{}|;':\",./<>?" }
+          ]
+        },
+        {
+          "name": "Dates",
+          "items": [
+            { "title": "Today", "value": "{{today}}" },
+            { "title": "Yesterday", "value": "{{yesterday}}" },
+            { "title": "Future Date", "value": "{{futureDate}}" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "SQL Injection",
+      "subcategories": [
+        {
+          "name": "Basic",
+          "items": [
+            { "title": "' OR '1'='1", "value": "' OR '1'='1" },
+            { "title": "'; DROP TABLE users;--", "value": "'; DROP TABLE users;--" },
+            { "title": "\" OR \"1\"=\"1", "value": "\" OR \"1\"=\"1" },
+            { "title": "'; DELETE FROM products;--", "value": "'; DELETE FROM products;--" }
+          ]
+        },
+        {
+          "name": "Advanced",
+          "items": [
+            { "title": "' OR 1=1--", "value": "' OR 1=1--" },
+            { "title": "admin'--", "value": "admin'--" },
+            { "title": "' AND 1=0 UNION SELECT 1,version()--", "value": "' AND 1=0 UNION SELECT 1,version()--" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "XSS",
+      "subcategories": [
+        {
+          "name": "XSS Basic",
+          "items": [
+            { "title": "<script>alert('XSS')</script>", "value": "<script>alert('XSS')</script>" },
+            { "title": "<img src=x onerror=alert('XSS')>", "value": "<img src=x onerror=alert('XSS')>" },
+            { "title": "<a href=\"javascript:alert('XSS')\">Click Me</a>", "value": "<a href=\"javascript:alert('XSS')\">Click Me</a>" }
+          ]
+        },
+        {
+          "name": "XSS Advanced",
+          "items": [
+            { "title": "<svg/onload=alert('XSS')>", "value": "<svg/onload=alert('XSS')>" },
+            { "title": "<details open ontoggle=alert(document.cookie)>", "value": "<details open ontoggle=alert(document.cookie)>" },
+            { "title": "<iframe src=\"javascript:alert('XSS');\">", "value": "<iframe src=\"javascript:alert('XSS');\">" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Email",
+      "subcategories": [
+        {
+          "name": "Common",
+          "items": [
+            { "title": "test@example.com", "value": "test@example.com" },
+            { "title": "invalid-email", "value": "invalid-email" },
+            { "title": "long-email-address@example.com", "value": "long-email-address@example.com" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "File Paths",
+      "subcategories": [
+        {
+          "name": "Windows",
+          "items": [
+            { "title": "C:\\Windows\\System32\\drivers\\etc\\hosts", "value": "C:\\Windows\\System32\\drivers\\etc\\hosts" },
+            { "title": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\", "value": "..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\..\\" }
+          ]
+        },
+        {
+          "name": "Linux",
+          "items": [
+            { "title": "/etc/passwd", "value": "/etc/passwd" },
+            { "title": "../", "value": "../../../../../../../../../../../../../../../../../" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Phone Numbers",
+      "subcategories": [
+        {
+          "name": "US",
+          "items": [
+            { "title": "1-800-555-1212", "value": "1-800-555-1212" },
+            { "title": "555-1212", "value": "555-1212" }
+          ]
+        },
+        {
+          "name": "International",
+          "items": [
+            { "title": "+44 20 7946 0991", "value": "+44 20 7946 0991" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Credit Cards",
+      "subcategories": [
+        {
+          "name": "Visa",
+          "items": [
+            { "title": "4000000000000000", "value": "4000000000000000" },
+            { "title": "Invalid Visa", "value": "4000000000000001" }
+          ]
+        },
+        {
+          "name": "MasterCard",
+          "items": [
+            { "title": "5400000000000000", "value": "5400000000000000" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Social Security Numbers",
+      "subcategories": [
+        {
+          "name": "US",
+          "items": [
+            { "title": "000-00-0000", "value": "000-00-0000" },
+            { "title": "666-00-0000", "value": "666-00-0000" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "IP Addresses",
+      "subcategories": [
+        {
+          "name": "IPv4",
+          "items": [
+            { "title": "192.168.1.1", "value": "192.168.1.1" },
+            { "title": "127.0.0.1", "value": "127.0.0.1" }
+          ]
+        }
+      ]
+    }
+  ]
+}

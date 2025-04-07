@@ -1,0 +1,24 @@
+{
+    "Boundary Values": [
+      "",
+      " ",
+      "1",
+      "0",
+      "-1",
+      "2147483647",
+      "-2147483648",
+      "9223372036854775807",
+      "-9223372036854775808"
+    ],
+    "SQL Injection": [
+      "' OR '1'='1",
+      "'; DROP TABLE users;--",
+      "\" OR \"1\"=\"1",
+      "'; DELETE FROM products;--"
+    ],
+    "XSS": [
+      "<script>alert('XSS')</script>",
+      "<img src=x onerror=alert('XSS')>",
+      "<a href=\"javascript:alert('XSS')\">Click Me</a>"
+    ]
+  }
